@@ -1,28 +1,32 @@
-{  "configuration":"{CFenvironmentType}"
-   ,"common" : {
-      "appdir":"{CFrootPath}/cfapp"
-      ,"cfsql": {
-          "socket":""
-          "ip":""
-          ,"user":""
-          ,"password":""
-          ,"port":""
-          ,"database":""
-      }
-   }
-   ,"configurations": 
-   [
-       "development": {
-          "cfsql": {
-              "ip":"127.0.0.1"
-              ,"user":"root"
-              ,"database":"MYDATABASE"
-          }
-          ,"include":"{appdir}/local_cloudframework.json"
-       }
-       ,"production": {
-          "bucket": "gs://bucket",
-          "include":"{bucket}/config/cloudframework.json"
-       }
-   ]
+{
+  "configuration": "{CFenvironmentType}",
+  "common": {
+    "appdir": "{CFrootPath}/cfapp",
+    "cfsql": {
+      "socket": "",
+      "ip": "",
+      "user": "",
+      "password": "",
+      "port": "",
+      "database": ""
+    }
+  },
+  "configurations": [
+    {
+      "development": {
+        "cfsql": {
+          "ip": "127.0.0.1",
+          "user": "root",
+          "database": "MYDATABASE"
+        },
+        "include": "{appdir}/local_cloudframework.json"
+      }
+    },
+    {
+      "production": {
+        "bucket": "gs://bucket",
+        "include": "{bucket}/config/cloudframework.json"
+      }
+    }
+  ]
 }
